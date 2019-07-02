@@ -1,3 +1,6 @@
 [submodule "lib/ArduinoSequenceContainer"]
 	path = lib/ArduinoSequenceContainer
 	url = https://github.com/Melkoroth/ArduinoSequenceContainer.git
+[submodule "lib/Time"]
+	path = lib/Time
+	url = https://github.com/PaulStoffregen/Time.git
