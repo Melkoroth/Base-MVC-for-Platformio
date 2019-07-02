@@ -29,7 +29,7 @@ cache:
     - "~/.platformio"
 
 env:
-  - PLATFORMIO_CI_SRC=src/hlocky.ino
+  - PLATFORMIO_CI_SRC=src/HLocky.ino
 
 install:
   - pip install -U platformio
