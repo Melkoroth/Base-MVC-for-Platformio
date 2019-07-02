@@ -7,9 +7,17 @@
 
 #include <Arduino.h>
 #include <EEPROM.h>
+#include <TimeLib.h>
 
+#include "controller/Controller.h"
+
+#include "model/Model.h"
 #include "model/MemAllocated.h"
 #include "model/Setting.h"
+#include "model/ObservablePattern.h"
+#include "model/event/Event.h"
+
+#include "view/ObserverPattern.h"
 
 const float VERSIONNUMBER = 0.1;
 
