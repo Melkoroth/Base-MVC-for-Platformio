@@ -36,4 +36,4 @@ install:
   - platformio update
 
 script:
-  - platformio ci --lib="." --board=esp_wroom_02
+  - platformio ci --lib="." --board=esp32dev
