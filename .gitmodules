@@ -1,0 +1,3 @@
+[submodule "lib/ArduinoSequenceContainer"]
+	path = lib/ArduinoSequenceContainer
+	url = https://github.com/Melkoroth/ArduinoSequenceContainer.git
