@@ -35,5 +35,8 @@ install:
   - pip install -U platformio
   - platformio update
 
+ -  wget https://github.com/PaulStoffregen/Time/archive/master.zip -O /tmp/time.zip
+  - unzip /tmp/time.zip -d /tmp
+
 script:
-  - platformio ci --lib="." --lib="lib/*" --board=esp32dev
+  - platformio ci --lib="." --lib="lib/*" --lib="/tmp/Time-master" --board=esp32dev
