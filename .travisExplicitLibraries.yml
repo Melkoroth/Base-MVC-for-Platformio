@@ -42,4 +42,4 @@ install:
   - unzip /tmp/time.zip -d /tmp
 
 script:
-  - platformio ci --lib="." --lib="lib/*" --lib="/tmp/ArduinoSequenceContainer-master" --lib="/tmp/Time-master" --board=eesp01_1m --board=d1_mini_pro
+  - platformio ci --lib="." --lib="lib/*" --lib="/tmp/ArduinoSequenceContainer-master" --lib="/tmp/Time-master" --board=esp01_1m --board=d1_mini_pro
