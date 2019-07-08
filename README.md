@@ -3,11 +3,12 @@
 [![Platform](https://img.shields.io/badge/platform-platformio-orange.svg)](https://platformio.org/)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/c93897649d444454b97d841909065c83)](https://www.codacy.com?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Melkoroth/Base-MVC-for-Platformio&amp;utm_campaign=Badge_Grade)
 [![Build Status](https://travis-ci.com/Melkoroth/Base-MVC-for-Platformio.svg?token=jLXVWnBdCix3QQKg7rsP&branch=master)](https://travis-ci.com/Melkoroth/Base-MVC-for-Platformio)
+[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0)
 
 This is a barebones project used as base to develop projects under the Platformio ecosystem. Some features include:
 * Implements the **Model-View-Controller** pattern.
 * Built using **Platformio** folder structure. There are some different example configurations under [platformio.ini](platformio.ini)
-* Uses **git submodules** for external libraries. To add them do ```git submodule init```[.gitmodules](.gitmodules)
+* Uses **git submodules** for external libraries. To add them do ```git submodule init```. See [.gitmodules](.gitmodules)
 * Is **Travis CI** enabled [.travis.yml](.travis.yml). There's also another Travis script that manually downloads external libraries instead of relying on git submodules [.travisExplicitLibraries.yml](.travisExplicitLibraries.yml)
 
 ## Model View Controller Implementation
@@ -24,9 +25,9 @@ You can read about the pattern on [Wikipedia](https://en.wikipedia.org/wiki/Mode
 ```c++
 //Object creations in main .ino
 Model model;
-//The controller knows about the Model
+//The Controller knows about the Model
 Controller controller(&model);
-//The view knows about the Controller
+//The View knows about the Controller
 SerialUI serialUI(&controller);
 //Attach view in main .ino
 model.attachObserver(&serialUI);
@@ -36,7 +37,7 @@ model.detachObserver(&serialUI);
 
 #### Flow of interactions:
 ```c++
-//Change the Model from the controller
+//Change the Model from the Controller
 _model->someMethod(someVars);
 //The Model does some stuff and creates an Event to warn the Views it has changed
 EventWhatever event(someMoreVars);
