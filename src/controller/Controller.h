@@ -1,8 +1,6 @@
 // #############################################################################
 //
 // # Name       : Controller
-// # Version    : 0.1
-//
 // # Author     : Juan L. Perez Diez <ender.vs.melkor at gmail>
 //
 // # Description: Part of Model-View-Controller pattern. Couples Views to Model.
@@ -19,7 +17,7 @@ class Controller {
 	public:
 		Controller(Model*const);
 		
-		void setClock(const uint8_t, const uint8_t, const uint8_t, const uint8_t, const uint8_t, const int) const;
+		void exampleControl() const;
 
 	private:
 		Controller(const Controller&);

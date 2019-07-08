@@ -1,8 +1,6 @@
 // #############################################################################
 //
 // # Name       : Event
-// # Version    : 1.0
-//
 // # Author     : Juan L. Perez Diez <ender.vs.melkor at gmail>
 //
 // # Description: Events are the way the Model notifies the Views
@@ -22,7 +20,7 @@ enum class EventType {
 class Event {
 	public:
 		Event();
-		virtual ~Event();
+		virtual ~Event() {}
 
 		virtual EventType getType() const = 0;
 		time_t getTimeStamp() const;

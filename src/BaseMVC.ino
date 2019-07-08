@@ -1,59 +1,43 @@
 // #############################################################################
 // #
-// # Name       : HLocky Firmware
+// # Name       : Base MVC project for Platformio development
 // # Author     : Juan L. Perez Diez <ender.vs.melkor at gmail>
-// #
+//
+// # Description: Implements the Model View Controller software pattern
+//
 // #############################################################################
 
 #include <Arduino.h>
-#include <EEPROM.h>
-#include <TimeLib.h>
 
 #include "controller/Controller.h"
 
 #include "model/Model.h"
-#include "model/MemAllocated.h"
-#include "model/Setting.h"
 #include "model/ObservablePattern.h"
 #include "model/event/Event.h"
+#include "model/event/EventError.h"
 
 #include "view/ObserverPattern.h"
-
-const float VERSIONNUMBER = 0.1;
-
-// *********************************************
-// PINOUT ASSIGN
-// *********************************************
-const uint8_t BUZZPIN = 0;
-const uint8_t LEDPIN = 0;
-const uint8_t MOTORAPIN = 0;
-const uint8_t MOTORBPIN = 0;
-const uint8_t PHOTOPIN = 0;
-const uint8_t VIBRATIONPIN = 0;
+#include "view/SerialUI.h"
 
 // *********************************************
-// CONFIG
+// OBJECT CREATION
 // *********************************************
-//Controls if HW outputs to serial or not
-#define SERIAL_DEBUG_LOG 1
-#if SERIAL_DEBUG_LOG
-    #define Sprintln(x) (Serial.println(x))
-    #define Sprint(x) (Serial.print(x))
-#else
-    #define Sprintln(x)
-    #define Sprint(x)
-#endif
+Model model;
+Controller controller(&model);
+SerialUI serialUI(&controller);
 
 // *********************************************
 // SETUP
 // *********************************************
 void setup(void) {
 	Serial.begin(115200);
+    model.attachObserver(&serialUI);
 }
 
 // *********************************************
 // MAIN LOOP LOGIC
 // *********************************************
 void loop(void) { 
-
+	controller.exampleControl();
+	delay(5000);
 }

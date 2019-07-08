@@ -1,8 +1,6 @@
 // #############################################################################
 //
 // # Name       : Observer pattern class
-// # Version    : 1.0
-//
 // # Author     : Juan L. Perez Diez <ender.vs.melkor at gmail>
 //
 // # Description: Implements a generic Observer Pattern

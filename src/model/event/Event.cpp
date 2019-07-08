@@ -2,8 +2,6 @@
 
 Event::Event() : _time(now()) {}
 
-Event::~Event() {}
-
 EventType Event::getType() const {
 	return EventType::None;
 }

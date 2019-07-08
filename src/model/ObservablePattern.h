@@ -1,8 +1,6 @@
 // #############################################################################
 //
 // # Name       : Observable pattern class
-// # Version    : 1.0
-//
 // # Author     : Juan L. Perez Diez <ender.vs.melkor at gmail>
 //
 // # Description: Holds a Sequence of Observers to be notified
