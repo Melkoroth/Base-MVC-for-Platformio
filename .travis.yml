@@ -36,4 +36,4 @@ install:
   - platformio update
 
 script:
-  - platformio ci --lib="." --lib="lib/*" --board=esp32dev --board=d1_mini_pro
+  - platformio ci --lib="." --lib="lib/*" --board=esp01_1m --board=d1_mini_pro
